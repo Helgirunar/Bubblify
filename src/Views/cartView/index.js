@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{ Component } from 'react';
 
-const cartView = function(){
+export class CartView extends Component{
+  render(){
     return(
       <p>cartView</p>
-    )
+    )}
 }
-export default cartView;
+export default CartView;

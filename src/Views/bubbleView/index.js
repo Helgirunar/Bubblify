@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const bubbleView = function(){
+export class BubbleView Component {
+  render(){
     return(
       <p>bubbleView</p>
     )
+  }
 }
-export default bubbleView;
+export default BubbleView;

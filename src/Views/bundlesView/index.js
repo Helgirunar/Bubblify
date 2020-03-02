@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const bundleView = function(){
+export class BundleView extends Component{
+  render(){
     return(
       <p>bundleView</p>
-    )
+    )}
 }
-export default bundleView;
+export default BundleView;

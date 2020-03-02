@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
-const aboutView = function(){
+export class AboutView extends Component{
+  render(){
     return(
       <p>aboutView</p>
-    )
+    )}
 }
-export default aboutView;
+export default AboutView;

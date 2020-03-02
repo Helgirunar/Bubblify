@@ -9,10 +9,9 @@ import AboutView from './Views/aboutView';
 const App = () => {
     return (
       <Switch>
-        <Route path='/bubbles'>
-          <BubbleListView/>
+        <Route exact path='/' component={BubbleListView}/>
+        <Route path='/bubbles/:id' component={BubbleView}>
         </Route>
-        <Route />
         <Route />
         <Route />
       </Switch>
