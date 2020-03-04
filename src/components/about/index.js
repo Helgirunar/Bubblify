@@ -9,7 +9,7 @@ class About extends Component {
   }
   render(){
     return(
-        console.log('lol')
+         console.log("kll")
 
     )
   }

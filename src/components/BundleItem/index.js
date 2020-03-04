@@ -13,7 +13,7 @@ const getBubblesName =( item ) => {
 
 const BundleItem = ({ id, name, description, items }) => (
 
-    <div className="card card-body bundle-item">
+    <div className="bundleItem">
         <h3 className="title">{ name }</h3>
         <p className="description">{ description }</p>
         {items.map((i,index) =>
