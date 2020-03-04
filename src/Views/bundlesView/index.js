@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Bundles from "../../components/bundles";
 import BubbleDetail from "../../components/bubbleDetails";
+import BubbleList from "../../components/bubbleList";
 
 export class BundleView extends Component{
  constructor(props) {
@@ -19,11 +20,11 @@ export class BundleView extends Component{
  }
  render() {
    const  { bundles } = this.state;
+
    console.log(this);
    return(
        <div>
-           {bundles.map((item) => (<Bundles id={item.id} name={item.name} items={item.items}/>))}
-           <BubbleDetail description={this.props.description}/>
+           {bundles.map((bundle) => (<Bundles key={bundle.id} id={bundle.id} name={bundle.name} items={bundle.items}/>))}
        </div>
 
    )

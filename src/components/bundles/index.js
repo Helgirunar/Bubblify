@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom'
+import BubbleView from "../../Views/bubbleView";
+import getProducts from "../../../../server/services/bubbleService"
 
 
 class Bundles extends Component {
@@ -12,12 +14,13 @@ class Bundles extends Component {
   }
   render(){
 
-const {name,discription,items} = this.props;
+const {name,items} = this.props;
+
     return(
         <div>
           <div>{name}</div>
-          <div>{discription}</div>
-            <div>{items[0]}</div>
+            <ul>{items}</ul>
+
         </div>
 
     )

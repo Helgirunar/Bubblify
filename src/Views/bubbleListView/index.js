@@ -13,16 +13,16 @@ export class BubbleListView extends Component {
         if(resp.ok) { return resp.json(); }
       }).then(data => {
         this.setState({bubbles: data});
-        console.log(data);
+
       });
-      console.log(this);
+
   }
   render(){
     const { bubbles } = this.state;
       console.log(this);
       return(
         <ul>
-        {bubbles.map((item) => ( <BubbleList id={item.id} name={item.name} description={item.description} price={item.price} image={item.image}/>))}
+        {bubbles.map((item) => ( <BubbleList key={item.id} id={item.id} name={item.name} description={item.description} price={item.price} image={item.image}/>))}
         </ul>
       )}
 }
