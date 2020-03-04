@@ -9,7 +9,6 @@ import NavBar from './components/navBar'
 
 const App = () => {
     return (
-<<<<<<< HEAD
       <div>
         <NavBar />
         <Switch>
