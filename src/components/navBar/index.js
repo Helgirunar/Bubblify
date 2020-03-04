@@ -6,9 +6,6 @@ export class NavBar extends Component{
   render(){
     return(
       <Link to='/bubbles'/>
-      <Link to='/bubbles/'/>
-      <Link />
-      <Link />
 
     )}
 }

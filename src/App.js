@@ -9,13 +9,14 @@ import NavBar from './components/navBar'
 
 const App = () => {
     return (
+<<<<<<< HEAD
       <div>
         <NavBar />
         <Switch>
           <Route exact path='/' component={BubbleListView}/>
           <Route exact path='/bubbles' component={BubbleListView}/>
           <Route path='/bubbles/:id' component={BubbleView}/>
-          <Route />
+          <Route path='/bundles' component={BundlesView} />
           <Route />
         </Switch>
       </div>
