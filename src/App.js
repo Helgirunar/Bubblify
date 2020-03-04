@@ -5,16 +5,20 @@ import BubbleView from './Views/bubbleView';
 import BundlesView from './Views/bundlesView';
 import CartView from './Views/cartView';
 import AboutView from './Views/aboutView';
+import NavBar from './components/navBar'
 
 const App = () => {
     return (
-      <Switch>
-        <Route exact path='/' component={BubbleListView}/>
-        <Route path='/bubbles/:id' component={BubbleView}>
-        </Route>
-        <Route />
-        <Route />
-      </Switch>
+      <div>
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={BubbleListView}/>
+          <Route exact path='/bubbles' component={BubbleListView}/>
+          <Route path='/bubbles/:id' component={BubbleView}/>
+          <Route />
+          <Route />
+        </Switch>
+      </div>
     )
 };
 

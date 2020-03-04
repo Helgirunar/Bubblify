@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 class BubbleList extends Component {
   constructor(props){
@@ -12,26 +13,29 @@ class BubbleList extends Component {
   render(){
     console.log('hello');
     const { id, name, description, price, image } = this.props;
+    console.log(id);
     return(
-      <Link to={'/bubbles/' + id}>
-      <div>
-        <img src={image} alt="Bubble image"/>
+      <div class='bubbleListContainer'>
+        <Link class='direction 'to={'/bubbles/' + id} id={id}>
+        <div class='bubbleListImageDiv'>
+          <img class='bubbleListImage' src={image} alt="Bubble image"/>
+        </div>
+        <div class='bubbleListInfo'>
+          <h3>{name}</h3>
+          <p>{description}</p>
+          <p>{price}</p>
+        </div>
+        </Link>
       </div>
-      <div>
-        <div>{name}</div>
-        <div>{description}</div>
-        <div>{price}</div>
-      </div>
-      </Link>
     )
   }
 }
 export default BubbleList;
 
 BubbleList.propTypes = {
-    id: PropTypes.number,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    price: PropTypes.number,
-    image: PropTypes.string
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired
 };
