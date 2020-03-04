@@ -19,7 +19,6 @@ export class BubbleListView extends Component {
   }
   render(){
     const { bubbles } = this.state;
-      console.log(this);
       return(
         <ul>
         {bubbles.map((item) => ( <BubbleList id={item.id} name={item.name} description={item.description} price={item.price} image={item.image}/>))}

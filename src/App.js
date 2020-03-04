@@ -16,7 +16,7 @@ const App = () => {
           <Route exact path='/bubbles' component={BubbleListView}/>
           <Route path='/bubbles/:id' component={BubbleView}/>
           <Route path='/bundles' component={BundlesView} />
-          <Route />
+          <Route path='/cart' component={CartView}/>
         </Switch>
       </div>
     )

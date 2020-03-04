@@ -27,11 +27,20 @@ export class BubbleView extends Component{
   }
   addToCart() {
     let  cart = [];
+    let found = false;
     const bubble = this.state.bubble;
     if(window.localStorage.getItem('cartItems')){
       cart = JSON.parse(window.localStorage.getItem('cartItems'));
     }
-    cart.push(bubble);
+    cart.map((item) => {
+      if(item.bubble.id === this.state.bubble.id){
+        item.count++;
+        found = true;
+      }
+    })
+    if(!found){
+      cart.push({bubble, count: 1});
+    }
     window.localStorage.setItem('cartItems',JSON.stringify(cart));
     console.log(window.localStorage.getItem('cartItems'));
   }
@@ -39,7 +48,7 @@ export class BubbleView extends Component{
   render() {
     const { id, name, description, price, image } = this.state.bubble;
     return (
-        <BubbleDetail id={id} name={name} description={description} price={price} image={image} addToCart={this.addToCart}/>
+        <BubbleDetail id={id} name={name} description={description} price={price} image={image} addToCart={this.addToCart} isSell={'true'}/>
     )
   }
 }

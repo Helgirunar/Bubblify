@@ -11,7 +11,8 @@ class BubbleDetail extends Component {
     console.log('this worked');
   }
   render(){
-    const { id, name, description, price, image, addToCart } = this.props;
+    const { id, name, description, price, image, addToCart,isSell } = this.props;
+    console.log(isSell);
     return(
       <div>
         <div>
@@ -23,7 +24,11 @@ class BubbleDetail extends Component {
           <div>{price}</div>
         </div>
         <div>
-        <button onClick={addToCart} >Add to Cart!</button>
+          {(isSell === 'true') ? (
+            <button onClick={addToCart} >Add to Cart!</button>
+          ) : (
+            <p/>
+          )}
         </div>
       </div>
     )
@@ -37,5 +42,6 @@ BubbleDetail.propTypes = {
   description: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired
+  addToCart: PropTypes.func.isRequired,
+  isSell: PropTypes.bool.isRequired
 };

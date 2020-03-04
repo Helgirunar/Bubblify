@@ -23,7 +23,7 @@ export class BundleView extends Component{
    return(
        <div>
            {bundles.map((item) => (<Bundles id={item.id} name={item.name} items={item.items}/>))}
-           <BubbleDetail description={this.props.description}/>
+           <BubbleDetail description={this.props.description} isSell='false'/>
        </div>
 
    )
