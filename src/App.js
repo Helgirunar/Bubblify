@@ -12,7 +12,7 @@ const App = () => {
         <Route exact path='/' component={BubbleListView}/>
         <Route path='/bubbles/:id' component={BubbleView}>
         </Route>
-        <Route />
+        <Route path='/bundles' component={BundlesView} />
         <Route />
       </Switch>
     )

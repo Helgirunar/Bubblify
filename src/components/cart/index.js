@@ -9,7 +9,7 @@ class Cart extends Component {
   }
   render(){
     return(
-
+        console.log('hello')
     )
   }
 }
