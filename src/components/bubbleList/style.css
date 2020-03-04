@@ -1,0 +1,22 @@
+.bubbleListImageDiv{
+  width:15%;
+  border-right-style: solid;
+  border-right-color: black;
+}
+.bubbleListImage{
+  width:100%;
+}
+
+.bubbleListInfo{
+  margin:1%;
+  width:80%;
+}
+.bubbleListContainer{
+  border-style:solid;
+  margin: 1%;
+}
+.direction{
+  background-color:lightgray;
+  display:flex;
+  flex-direction: row;
+}

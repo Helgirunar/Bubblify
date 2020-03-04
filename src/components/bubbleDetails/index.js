@@ -5,33 +5,37 @@ import { Link } from 'react-router-dom';
 class BubbleDetail extends Component {
   constructor(props){
     super(props);
-    console.log(this)
-  }
-  componentDidMount(){
 
   }
+  componentDidMount(){
+    console.log('this worked');
+  }
   render(){
-    const { id, name, description, price, image } = this.props;
+    const { id, name, description, price, image, addToCart } = this.props;
     return(
-        <Link to={'/bubbles/' + id}>
-          <div>
-            <img src={image} alt="Bubble image"/>
-          </div>
-          <div>
-            <div>{name}</div>
-            <div>{description}</div>
-            <div>{price}</div>
-          </div>
-        </Link>
+      <div>
+        <div>
+          <img src={image} alt="Bubble image"/>
+        </div>
+        <div>
+          <div>{name}</div>
+          <div>{description}</div>
+          <div>{price}</div>
+        </div>
+        <div>
+        <button onClick={addToCart} >Add to Cart!</button>
+        </div>
+      </div>
     )
   }
 }
 export default BubbleDetail;
 
 BubbleDetail.propTypes = {
-  id: PropTypes.number,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  price: PropTypes.number,
-  image: PropTypes.string
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  addToCart: PropTypes.func.isRequired
 };
