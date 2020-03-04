@@ -1,33 +1,35 @@
-import React, { Component } from 'react';
-import Bundles from "../../components/bundles";
-import BubbleDetail from "../../components/bubbleDetails";
-import BubbleList from "../../components/bubbleList";
+import React from 'react';
+import BundleList from "../../components/BundleList";
 
-export class BundleView extends Component{
- constructor(props) {
-   super(props)
-   this.state = {
-     bundles:[]
-   }
- }
- componentDidMount() {
-   fetch('http://localhost:3500/api/bundles').then(resp =>{
-     if(resp.ok){return resp.json();}
-   }).then(data =>{
-     this.setState({bundles: data});
-   });
+let bubbleService = require('../../../../server/services/bubbleService');
 
- }
- render() {
-   const  { bundles } = this.state;
 
-   console.log(this);
-   return(
-       <div>
-           {bundles.map((bundle) => (<Bundles key={bundle.id} id={bundle.id} name={bundle.name} items={bundle.items}/>))}
-       </div>
 
-   )
- }
+class Bundles extends React.Component {
+    componentDidMount() {
+        this.setState({
+            bundles: bubbleService.getBundles()
+        })
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            bundles: [],
+            search: "",
+        }
+    }
+
+
+
+    render() {
+        return (
+            <div>
+                <BundleList bundles={ this.state.bundles } />
+            </div>
+        );
+    }
 }
-export default BundleView;
+
+
+export default Bundles;
