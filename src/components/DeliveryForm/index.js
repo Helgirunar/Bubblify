@@ -28,9 +28,10 @@ class DeliveryForm extends Component {
         const { fullName,phone,address,city,postal } = this.state.fields;
         const errors = {};
         let reg = /^\d+$/;
-        if(fullName === ''){errors.fullNameError = 'Full name is required'}
-        if (address === '') { errors.addressError = 'Address is required.'; }
-        if (city === '') { errors.cityError = 'City is required.'; }
+        let regstring = /^[a-zA-Z ]+$/;
+        if(fullName === ''|| regstring.test(fullName) === false){errors.fullNameError = 'Full name is required or cannot contain numbers!'}
+        if (address === '' ) { errors.addressError = 'Address is required.'; }
+        if (city === '' || regstring.test(fullName) === false) { errors.cityError = 'City is required or cannot contain numbers.'; }
         if (phone === '' || reg.test(phone) === false) { errors.phoneError = 'Telephone is required or characters was entered.'; }
         if (postal === '' || reg.test(phone) === false ) { errors.postalError = 'Postal code is required or character was entered.'; }
         if (Object.keys(errors).length > 0) {

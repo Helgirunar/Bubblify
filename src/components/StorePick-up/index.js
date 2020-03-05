@@ -23,7 +23,8 @@ class StorePickUp extends Component {
         const { fullName,phone } = this.state.fields;
         let reg = /^\d+$/;
         const errors = {};
-        if(fullName === ''){errors.fullNameError = 'Full name is required'}
+        let regstring = /^[a-zA-Z ]+$/;
+        if(fullName === ''|| regstring.test(fullName) === false){errors.fullNameError = 'Full name is required or cannot contain numbers!'}
         if (phone === '' || reg.test(phone) === false) { errors.phoneError = 'Telephone is required or characters was entered.'; }
 
 

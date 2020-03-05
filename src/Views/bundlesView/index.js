@@ -23,7 +23,6 @@ class Bundles extends React.Component {
 
 
     render() {
-      console.log('hello');
         return (
             <div>
                 <BundleList bundles={ this.state.bundles } />
