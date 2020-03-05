@@ -20,7 +20,7 @@ class BubbleList extends Component {
         <div className='bubbleListInfo'>
           <h3>{name}</h3>
           <p>{description}</p>
-          <p>{price}</p>
+          <p>Price: {price}</p>
         </div>
         </Link>
       </div>

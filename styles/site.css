@@ -55,11 +55,16 @@
 }
 .singleBubbleDiv{
     border-style:solid;
-    float: initial;
+    display: flex;
     margin: 4%;
     border-color: black;
     background-color:#9ED9CCFF;
+    flex-direction:column;
 }
+.bubbleSingleImage{
+    align-self: center;
+}
+
 .error{
     color:red;
     font-weight: bold;
