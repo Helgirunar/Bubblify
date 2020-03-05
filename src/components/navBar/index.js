@@ -7,10 +7,15 @@ export class NavBar extends Component{
   render(){
     return(
       <div className='Navbar'>
-        <Link to='/bubbles' style={{textDecoration: 'none'}}>Bubbles</Link>
-        <Link to='/bundles' style={{textDecoration: 'none'}}>Bundles</Link>
-        <Link to='/about' style={{textDecoration: 'none'}}>About us!</Link>
-        <Link to='/cart' style={{textDecoration: 'none'}}>Cart</Link>
+          <div className='Logo'>
+              <img src='https://www.mariowiki.com/images/thumb/b/bb/SuperMarioLand2Artwork3.png/160px-SuperMarioLand2Artwork3.png'alt='mariolog'/>
+          </div>
+            <div className='navLinks'>
+                <Link to='/bubbles'>Bubbles</Link>
+                <Link to='/bundles'>Bundles</Link>
+                <Link to='/about'>About us!</Link>
+                <Link to='/cart'>Cart</Link>
+          </div>
       </div>
     )}
 }

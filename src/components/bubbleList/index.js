@@ -12,12 +12,12 @@ class BubbleList extends Component {
   render(){
     const { id, name, description, price, image } = this.props;
     return(
-      <div class='bubbleListContainer'>
-        <Link class='direction 'to={'/bubbles/' + id} id={id}>
-        <div class='bubbleListImageDiv'>
-          <img class='bubbleListImage' src={image} alt="Bubble image"/>
+      <div className='bubbleListContainer'>
+        <Link className='direction 'to={'/bubbles/' + id} id={id}>
+        <div className='bubbleListImageDiv'>
+          <img className='bubbleListImage' src={image} alt="Bubble image"/>
         </div>
-        <div class='bubbleListInfo'>
+        <div className='bubbleListInfo'>
           <h3>{name}</h3>
           <p>{description}</p>
           <p>{price}</p>

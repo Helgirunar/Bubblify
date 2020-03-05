@@ -1,1 +1,56 @@
 /* You can add styles here */
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content:space-between;
+    background-color: peachpuff;
+    align-items: center;
+}
+.navLinks * {
+    padding-right: 30px;
+    color: #232946;
+    font-size: x-large;
+}
+
+.logo {
+    justify-content: inherit;
+    float:left;
+
+}
+.about{
+    padding-left: 20px;
+}
+.peach-img{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bubbleListImageDiv{
+    width:15%;
+    border-right-style: solid;
+    border-right-color: black;
+}
+.bubbleListImage{
+    width:100%;
+}
+
+.bubbleListInfo{
+    margin:1%;
+    width:80%;
+}
+.bubbleListContainer{
+    border-style:solid;
+    margin: 1%;
+}
+.direction{
+    background-color:#9ED9CCFF;
+    display:flex;
+    flex-direction: row;
+}
+.bundleItem{
+    border-style:solid;
+    margin: 4%;
+    border-color: black;
+    background-color:#9ED9CCFF;
+}
+

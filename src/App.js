@@ -17,6 +17,8 @@ const App = () => {
           <Route path='/bubbles/:id' component={BubbleView}/>
           <Route path='/bundles' component={BundlesView} />
           <Route path='/cart' component={CartView}/>
+          <Route path='/about' component={AboutView} />
+          <Route />
         </Switch>
       </div>
     )
