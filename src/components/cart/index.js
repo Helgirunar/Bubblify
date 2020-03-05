@@ -6,7 +6,7 @@ class Cart extends Component {
   constructor(props){
     super(props);
     this.state = {
-        item: this.props
+        item: this.props,
     }
   }
   componentDidMount(){
@@ -24,7 +24,7 @@ class Cart extends Component {
           <p>{item.props.bubble.description}</p>
           <p>price: {item.props.bubble.price}</p>
         </div>
-        <p>count: {item.props.count}</p>
+        <p>count: {item.props.bubble.count}</p>
       </Link>
     )
   }

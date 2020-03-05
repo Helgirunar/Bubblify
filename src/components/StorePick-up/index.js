@@ -21,9 +21,11 @@ class StorePickUp extends Component {
     }
     validateForm(){
         const { fullName,phone } = this.state.fields;
+        let reg = /^\d+$/;
         const errors = {};
         if(fullName === ''){errors.fullNameError = 'Full name is required'}
-        if (phone === '') { errors.phoneError = 'Telephone is required.'; }
+        if (phone === '' || reg.test(phone) === false) { errors.phoneError = 'Telephone is required or characters was entered.'; }
+
 
         if (Object.keys(errors).length > 0) {
             this.setState({...this.state.errors,errors});
