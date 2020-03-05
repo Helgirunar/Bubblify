@@ -1,0 +1,25 @@
+.cartMiddle{
+  border-style: solid;
+  width: 58%;
+}
+.cartContainer{
+  margin-top:2%;
+  margin-bottom:4%;
+  display:flex;
+}
+.cartLeft{
+  padding-left: 1%;
+  padding-right: 1%;
+  width:22%;
+}
+.cartRight{
+  padding-left: 1%;
+  padding-right: 1%;
+  width:22%;
+}
+.cart{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}

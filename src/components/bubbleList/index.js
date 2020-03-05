@@ -6,14 +6,11 @@ import './style.css';
 class BubbleList extends Component {
   constructor(props){
     super(props);
-    console.log(this);
   }
   componentDidMount(){
   }
   render(){
-    console.log('hello');
     const { id, name, description, price, image } = this.props;
-    console.log(id);
     return(
       <div className='bubbleListContainer'>
         <Link className='direction 'to={'/bubbles/' + id} id={id}>

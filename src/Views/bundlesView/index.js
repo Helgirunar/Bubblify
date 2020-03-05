@@ -1,15 +1,16 @@
 import React from 'react';
 import BundleList from "../../components/BundleList";
 
-let bubbleService = require('../../../../server/services/bubbleService');
 
 
 
 class Bundles extends React.Component {
     componentDidMount() {
-        this.setState({
-            bundles: bubbleService.getBundles()
-        })
+      fetch('http://localhost:3500/api/bundles').then(resp => {
+        if(resp.ok) {return resp.json(); }
+      }).then(data =>{
+        this.setState({bundles: data});
+      });
     }
 
     constructor(props) {
@@ -22,6 +23,7 @@ class Bundles extends React.Component {
 
 
     render() {
+      console.log('hello');
         return (
             <div>
                 <BundleList bundles={ this.state.bundles } />
