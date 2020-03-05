@@ -4,7 +4,7 @@ import BundleList from "../../components/BundleList";
 
 
 
-class Bundles extends React.Component {
+class BundleListView extends React.Component {
     componentDidMount() {
       fetch('http://localhost:3500/api/bundles').then(resp => {
         if(resp.ok) {return resp.json(); }
@@ -23,14 +23,14 @@ class Bundles extends React.Component {
 
 
     render() {
-      console.log('hello');
         return (
-            <div>
-                <BundleList bundles={ this.state.bundles } />
-            </div>
+            <ul>
+              {this.state.bundles.map((item) => (<BundleList id={item.id} name={item.name} items={item.items} />))
+              }
+            </ul>
         );
     }
 }
 
 
-export default Bundles;
+export default BundleListView;
