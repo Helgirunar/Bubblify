@@ -26,9 +26,10 @@ export class BubbleView extends Component{
     })
   }
   addToCart() {
-    let  cart = [];
+    let cart = [];
     let found = false;
     const bubble = this.state.bubble;
+
     if(window.localStorage.getItem('cartItems')){
       cart = JSON.parse(window.localStorage.getItem('cartItems'));
     }
@@ -37,7 +38,7 @@ export class BubbleView extends Component{
         item.count++;
         found = true;
       }
-    })
+    });
     if(!found){
       cart.push({bubble, count: 1});
     }

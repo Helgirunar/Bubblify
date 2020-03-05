@@ -12,9 +12,8 @@ class BubbleDetail extends Component {
   }
   render(){
     const { id, name, description, price, image, addToCart,isSell } = this.props;
-    console.log(isSell);
     return(
-      <div>
+      <div className='singleBubbleDiv'>
         <div>
           <img src={image} alt="Bubble image"/>
         </div>
@@ -25,7 +24,7 @@ class BubbleDetail extends Component {
         </div>
         <div>
           {(isSell === 'true') ? (
-            <button onClick={addToCart} >Add to Cart!</button>
+            <button className='btn btn-primary' onClick={addToCart} >Add to Cart!</button>
           ) : (
             <p/>
           )}
@@ -43,5 +42,5 @@ BubbleDetail.propTypes = {
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   addToCart: PropTypes.func.isRequired,
-  isSell: PropTypes.bool.isRequired
+  isSell: PropTypes.string.isRequired
 };

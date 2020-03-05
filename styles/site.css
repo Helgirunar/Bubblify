@@ -53,6 +53,13 @@
     border-color: black;
     background-color:#9ED9CCFF;
 }
+.singleBubbleDiv{
+    border-style:solid;
+    float: initial;
+    margin: 4%;
+    border-color: black;
+    background-color:#9ED9CCFF;
+}
 .error{
     color:red;
     font-weight: bold;

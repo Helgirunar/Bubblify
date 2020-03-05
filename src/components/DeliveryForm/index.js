@@ -27,11 +27,12 @@ class DeliveryForm extends Component {
     validateForm(){
         const { fullName,phone,address,city,postal } = this.state.fields;
         const errors = {};
+        let reg = /^\d+$/;
         if(fullName === ''){errors.fullNameError = 'Full name is required'}
         if (address === '') { errors.addressError = 'Address is required.'; }
         if (city === '') { errors.cityError = 'City is required.'; }
-        if (phone === '') { errors.phoneError = 'Telephone is required.'; }
-        if (postal === '') { errors.postalError = 'Postal code is required.'; }
+        if (phone === '' || reg.test(phone) === false) { errors.phoneError = 'Telephone is required or characters was entered.'; }
+        if (postal === '' || reg.test(phone) === false ) { errors.postalError = 'Postal code is required or character was entered.'; }
         if (Object.keys(errors).length > 0) {
             this.setState({...this.state.errors,errors});
             return false;
