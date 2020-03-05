@@ -20,6 +20,7 @@ const App = () => {
           <Route exact path='/bubbles/:id' component={BubbleView}/>
           <Route exact path='/bundles' component={BundlesView} />
           <Route exact path='/about' component={AboutView} />
+          <Route exact path='/cart' component={CartView}/>
           <Route exact path='/delivery' component={DeliveryForm}/>
           <Route exact path='/pickup' component={StorePickUp}/>
           <Route path='*' component={NotFound}/>
