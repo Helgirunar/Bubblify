@@ -10,7 +10,7 @@ class BundleList extends Component {
       bubbles: []
     }
   }
-  componentDidMount() {
+  componentDidMount(){
     let tempBubbles = [];
     this.props.items.map((item) => {
       fetch(`http://localhost:3500/api/bubbles/${item}`).then(resp =>{
@@ -19,6 +19,7 @@ class BundleList extends Component {
         tempBubbles.push(data);
       })
     })
+    console.log(tempBubbles);
     this.setState({
       bubbles:tempBubbles
     })
