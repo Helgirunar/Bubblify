@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import Form from '../Form';
 import Input from "../Input";
 import toastr from 'toastr';
@@ -41,7 +42,14 @@ class StorePickUp extends Component {
             toastr.error('The form was not successfully submitted!','Failed!');
         } else{
             console.log(this.state.fields);
-            toastr.success('This form was successfully submitted!','Success')
+            this.setState({
+                fields: {
+                    fullName: '',
+                    phone: '',
+
+                }});
+            window.localStorage.removeItem('cartItems');
+            toastr.success('Order was submitted!','Success')
         }
     }
     render() {

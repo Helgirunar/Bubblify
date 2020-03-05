@@ -24,7 +24,7 @@ class Cart extends Component {
           <p>{item.props.bubble.description}</p>
           <p>price: {item.props.bubble.price}</p>
         </div>
-        <p>count: {item.props.bubble.count}</p>
+        <p>count: {item.props.count}</p>
       </Link>
     )
   }

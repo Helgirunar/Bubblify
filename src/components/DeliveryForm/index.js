@@ -47,7 +47,16 @@ class DeliveryForm extends Component {
         toastr.error('The form was not successfully submitted!','Failed!');
     } else{
         console.log(this.state.fields);
-        toastr.success('This form was successfully submitted!','Success')
+        this.setState({
+            fields: {
+                fullName: '',
+                address: '',
+                city: '',
+                phone: '',
+                postal: '',
+            }});
+        window.localStorage.removeItem('cartItems');
+        toastr.success('Order was submitted!','Success')
     }
 }
     render() {
