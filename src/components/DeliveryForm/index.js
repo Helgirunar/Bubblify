@@ -47,7 +47,6 @@ class DeliveryForm extends Component {
     if(!this.validateForm()){
         toastr.error('The form was not successfully submitted!','Failed!');
     } else{
-        console.log(this.state.fields);
         this.setState({
             fields: {
                 fullName: '',

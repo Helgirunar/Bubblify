@@ -43,7 +43,6 @@ export class BubbleView extends Component{
       cart.push({bubble, count: 1});
     }
     window.localStorage.setItem('cartItems',JSON.stringify(cart));
-    console.log(window.localStorage.getItem('cartItems'));
   }
   //ERROR CHECK FOR ID THAT DOES NOT EXIST
   render() {

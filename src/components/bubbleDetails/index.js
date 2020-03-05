@@ -8,7 +8,6 @@ class BubbleDetail extends Component {
 
   }
   componentDidMount(){
-    console.log('this worked');
   }
   render(){
     const { id, name, description, price, image, addToCart,isSell } = this.props;

@@ -13,7 +13,6 @@ class BubbleDetail extends Component {
     }
   }
   componentDidMount(){
-    console.log(this.props);
     this.setState({
       id: this.props.id,
       name: this.props.name,
@@ -23,7 +22,6 @@ class BubbleDetail extends Component {
   render(){
     const { addToCart,isSell} = this.props;
     const { id, name, bubbles } = this.state;
-    console.log(this.state);
     return(
       <div>
         <div>

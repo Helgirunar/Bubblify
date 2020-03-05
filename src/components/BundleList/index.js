@@ -19,7 +19,6 @@ class BundleList extends Component {
         tempBubbles.push(data);
       })
     })
-    console.log(tempBubbles);
     this.setState({
       bubbles:tempBubbles
     })
@@ -45,5 +44,5 @@ export default BundleList;
 BundleList.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    item: PropTypes.array.isRequired
+    item: PropTypes.array
 };

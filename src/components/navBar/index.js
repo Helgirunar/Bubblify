@@ -8,7 +8,9 @@ export class NavBar extends Component{
     return(
       <div className='Navbar'>
           <div className='Logo'>
+            <Link to='/'>
               <img src='https://www.mariowiki.com/images/thumb/b/bb/SuperMarioLand2Artwork3.png/160px-SuperMarioLand2Artwork3.png'alt='mariolog'/>
+            </Link>
           </div>
             <div className='navLinks'>
                 <Link to='/bubbles'>Bubbles</Link>

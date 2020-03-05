@@ -13,7 +13,6 @@ class BundleView extends React.Component {
         bubbles:[]
       },
       this.addToCart = this.addToCart.bind(this);
-      this.renderBubbles = this.renderBubbles.bind(this);
     }
 
     componentDidMount() {
@@ -26,24 +25,15 @@ class BundleView extends React.Component {
             if(resp.ok) {return resp.json();}
           }).then(data => {
             tempBubbles.push(data);
-            console.log('creating bubble array');
           })
         })
-        console.log('setting bubbles');
         this.setState({
           bubbles:tempBubbles
         });
-        console.log('setting bundles');
         this.setState({bundle: data});
       });
     }
-
-    renderBubbles(data){
-    }
     addToCart(){
-      console.log('button clicked!');
-      console.log(this.state.bubbles.length);
-      console.log(this.state.bundle.items.length);
     }
     render() {
       const { bundle, bubbles } = this.state;

@@ -10,7 +10,6 @@ class Cart extends Component {
     }
   }
   componentDidMount(){
-    console.log(this.state.item);
   }
   render(){
     const { item } = this.state;
@@ -30,3 +29,7 @@ class Cart extends Component {
   }
 }
 export default Cart;
+
+Cart.propTypes = {
+  item: PropTypes.object
+}
