@@ -7,6 +7,9 @@ import BundleView from './Views/bundleView'
 import CartView from './Views/cartView';
 import AboutView from './Views/aboutView';
 import NavBar from './components/navBar'
+import DeliveryForm from "./components/DeliveryForm";
+import NotFound from "./components/NotFound";
+import StorePickUp from "./components/StorePick-up";
 
 const App = () => {
     return (
@@ -20,6 +23,12 @@ const App = () => {
           <Route path='/bundles/:id' component={BundleView} />
           <Route path='/cart' component={CartView}/>
           <Route path='/about' component={AboutView} />
+          <Route exact path='/bubbles/:id' component={BubbleView}/>
+          <Route exact path='/bundles' component={BundlesView} />
+          <Route exact path='/about' component={AboutView} />
+          <Route exact path='/delivery' component={DeliveryForm}/>
+          <Route exact path='/pickup' component={StorePickUp}/>
+          <Route path='*' component={NotFound}/>
           <Route />
         </Switch>
       </div>
